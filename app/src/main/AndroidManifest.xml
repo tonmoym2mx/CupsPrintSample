@@ -13,7 +13,17 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name">
-        <service
+        <activity
+            android:name=".app.TestActivity"
+            android:exported="true"
+            android:label="@string/activity_add_label"
+            android:theme="@style/AndroidCupsPrint">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <!--<service
             android:name=".printservice.CupsService"
             android:permission="android.permission.BIND_PRINT_SERVICE">
             <intent-filter>
@@ -61,7 +71,7 @@
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activity>-->
     </application>
 
 </manifest>

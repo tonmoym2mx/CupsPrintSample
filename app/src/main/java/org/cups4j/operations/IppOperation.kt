@@ -142,6 +142,8 @@ abstract class IppOperation(val context: Context) {
             connection.setChunkedStreamingMode(0)
             connection.setRequestProperty("Content-Type", IPP_MIME_TYPE)
 
+
+
             if (url.protocol == "https") {
                 HttpConnectionManagement.handleHttpsUrlConnection(context, connection as HttpsURLConnection)
             }
